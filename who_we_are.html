@@ -1,0 +1,203 @@
+ <!DOCTYPE html> <!-- this basically tells us to make a document page -->
+<html>
+  <head> <!-- this is the actual code source where we input our fonts, links, etc -->
+    <title>Legacy Robotics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    </style>
+    <style>
+/* --- Lift-up physics for top nav links --- */
+.w3-top .w3-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.w3-top .w3-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: add slight shadow on click for tactile feedback */
+.w3-top .w3-button:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+  </head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-large w3-white" style="align-items: center;">
+    <div class="w3-col s2" style="text-align:center;">
+       <a href="index.html">
+      <img src="Legacy/legacy logo.png" style="width:30%;">
+      </a>
+    </div>
+    <div class="w3-col s2">
+      <a href="index.html" class="w3-button w3-block">Home</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="our_team.html" class="w3-button w3-block">Our Team</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="who_we_are.html" class="w3-button w3-block">Who we are</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="contact.html" class="w3-button w3-block">Contact</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Our mission -->
+<div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xxlarge w3-bottombar w3-border-dark-grey w3-padding-16">About the Team</span>
+    </div>
+    <p style="font-size:18px; text-align:center;">
+     Legacy Robotics launched its Mars Rover initiative to bring together a strong community of passionate and ambitious undergraduate students, committed to advancing space exploration technology. Our team focuses on the entire development process, from designing to building, ultimately aiming to compete at the University Rover Challenge. This quarter, a team of 35 students work collaboratively to push the boundaries of robotics, precision engineering, and autonomous systems as we take on challenges. 
+    </p>
+    </div>
+</div>
+
+<!-- SLIDESHOW-->
+<div style="display:flex; justify-content:center; align-items:center; margin-top:40px;">
+  <div style="max-width:900px; width:90%; position:relative;">
+    <div class="mySlides">
+      <img src="Legacy/legacy_fall_GM1.jpg" style="width:100%; height:500px; object-fit:cover; border-radius:10px;">
+    </div>
+    <div class="mySlides">
+      <img src="Legacy/ani_shot.png" style="width:100%; height:500px; object-fit:cover; border-radius:10px;">
+    </div>
+    <div class="mySlides">
+      <img src="Legacy/club_fair_selfie.png" style="width:100%; height:500px; object-fit:cover; border-radius:10px;">
+    </div>
+    <div class="mySlides">
+      <img src="Legacy/club_fair.png" style="width:100%; height:500px; object-fit:cover; border-radius:10px;">
+    </div>
+  </div>
+</div>
+
+
+    <!-- Controls -->
+<div class="w3-container w3-dark-grey w3-padding w3-xlarge" 
+     style="
+       display:flex; 
+       justify-content:space-between; 
+       align-items:center; 
+       max-width:900px; 
+       margin:30px auto; 
+       border-radius:15px; 
+       padding:15px 25px; 
+       background:linear-gradient(135deg, #2f2f2f, #1c1c1c); 
+       box-shadow:0 4px 12px rgba(0,0,0,0.25);
+     ">
+
+  <!-- Left Arrow -->
+  <div onclick="plusDivs(-1)" 
+       style="
+         cursor:pointer; 
+         width:65px; 
+         height:65px; 
+         display:flex; 
+         justify-content:center; 
+         align-items:center; 
+         border-radius:50%; 
+         background:radial-gradient(circle, #444 0%, #222 80%); 
+         transition:all 0.25s ease;
+         box-shadow:0 4px 10px rgba(0,0,0,0.3);
+       "
+       onmouseover="this.style.background='radial-gradient(circle, #008080, #004d4d)'; this.style.transform='scale(1.1)'"
+       onmouseout="this.style.background='radial-gradient(circle, #444 0%, #222 80%)'; this.style.transform='scale(1)'">
+    <i class="fa fa-arrow-left" style="font-size:32px; color:white;"></i>
+  </div>
+
+  <!-- Dots -->
+  <div class="w3-center" style="display:flex; gap:10px;">
+    <span class="w3-tag demodots" 
+          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
+          onclick="currentDiv(1)"
+          onmouseover="this.style.background='#00b3b3'"
+          onmouseout="this.style.background='transparent'"></span>
+    <span class="w3-tag demodots" 
+          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
+          onclick="currentDiv(2)"
+          onmouseover="this.style.background='#00b3b3'"
+          onmouseout="this.style.background='transparent'"></span>
+    <span class="w3-tag demodots" 
+          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
+          onclick="currentDiv(3)"
+          onmouseover="this.style.background='#00b3b3'"
+          onmouseout="this.style.background='transparent'"></span>
+    <span class="w3-tag demodots" 
+          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
+          onclick="currentDiv(4)"
+          onmouseover="this.style.background='#00b3b3'"
+          onmouseout="this.style.background='transparent'"></span>
+  </div>
+
+  <!-- Right Arrow -->
+  <div onclick="plusDivs(1)" 
+       style="
+         cursor:pointer; 
+         width:65px; 
+         height:65px; 
+         display:flex; 
+         justify-content:center; 
+         align-items:center; 
+         border-radius:50%; 
+         background:radial-gradient(circle, #444 0%, #222 80%); 
+         transition:all 0.25s ease;
+         box-shadow:0 4px 10px rgba(0,0,0,0.3);
+       "
+       onmouseover="this.style.background='radial-gradient(circle, #008080, #004d4d)'; this.style.transform='scale(1.1)'"
+       onmouseout="this.style.background='radial-gradient(circle, #444 0%, #222 80%)'; this.style.transform='scale(1)'">
+    <i class="fa fa-arrow-right" style="font-size:32px; color:white;"></i>
+  </div>
+</div>
+
+</div>
+
+
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+

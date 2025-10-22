@@ -1,0 +1,131 @@
+  <!DOCTYPE html> <!-- this basically tells us to make a document page -->
+<html>
+  <head> <!-- this is the actual code source where we input our fonts, links, etc -->
+    <title>Legacy Robotics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    </style>
+
+    <style>
+ .social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 10px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+    </style>
+
+    <style>
+/* --- Lift-up physics for top nav links --- */
+.w3-top .w3-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.w3-top .w3-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: add slight shadow on click for tactile feedback */
+.w3-top .w3-button:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+
+  </head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-large w3-white" style="align-items: center;">
+    <div class="w3-col s2" style="text-align:center;">
+       <a href="index.html">
+      <img src="Legacy/legacy logo.png" style="width:30%;">
+      </a>
+    </div>
+    <div class="w3-col s2">
+      <a href="index.html" class="w3-button w3-block">Home</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="our_team.html" class="w3-button w3-block">Our Team</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="who_we_are.html" class="w3-button w3-block">Who we are</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="contact.html" class="w3-button w3-block">Contact</a>
+    </div>
+  </div>
+</div>
+
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xxlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+    </div>
+    <p style="font-size:18px; text-align:center;">
+      Interested in joining? Want to learn more? Feel free to contact us!
+    </p>
+    </div>
+  </div>
+
+<form action="https://formspree.io/f/manpvkpj" method="POST" style="max-width:600px; margin: 40px auto;">
+  <label>Name *</label>
+  <div style="display:flex; gap:10px;">
+    <input type="text" name="firstName" placeholder="First" required style="width:50%; padding:10px;">
+    <input type="text" name="lastName" placeholder="Last" required style="width:50%; padding:10px;">
+  </div>
+
+  <label style="display:block; margin-top:20px;">Email *</label>
+  <input type="email" name="email" placeholder="Enter your email" required style="width:100%; padding:10px;">
+
+  <label style="display:block; margin-top:20px;">Comment *</label>
+  <textarea name="message" rows="6" placeholder="Write your message..." required style="width:100%; padding:10px;"></textarea>
+
+  <button type="submit" style="margin-top:20px; padding:12px 20px; background:#ddd; border:none; cursor:pointer;">
+    Submit
+  </button>
+</form>
+
+<!-- footer -->
+<footer class="w3-container w3-padding-32 w3-light-grey">
+  <div class="w3-row w3-container" 
+       style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    
+    <!-- Left Text -->
+    <div class="footer-text" style="font-size: 16px; color: #333;">
+      <p>UC Irvine</p>
+      <p>Legacy Robotics</p>
+    </div>
+
+    <!-- Right Social Icons -->
+    <div class="footer-icons" style="display: flex; gap: 20px; align-items: center;">
+      <a href="https://www.instagram.com/legacyuci/" target="_blank" class="social-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+             alt="Instagram" class="social-icon" style="width:40px;">
+      </a>
+      <a href="https://www.linkedin.com/company/legacy-robotics/posts/?feedView=all" target="_blank" class="social-link">
+        <img src="https://sb.kaleidousercontent.com/67418/400x400/d2ee90c914/linkedin-logo.png" 
+             alt="LinkedIn" class="social-icon" style="width:40px;">
+      </a>
+      <a href="https://oel.eng.uci.edu/student-clubs-project-teams/">Active Projects @ UCI</a>
+    </div>
+  </div>
+</footer>
+
+

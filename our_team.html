@@ -1,0 +1,772 @@
+<!DOCTYPE html> <!-- this basically tells us to make a document page -->
+<html>
+  <head> <!-- this is the actual code source where we input our fonts, links, etc -->
+    <title>Legacy Robotics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+      html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+      .mySlides {display:none}
+      .w3-tag, .fa {cursor:pointer}
+      .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    
+      .styled-select {
+        padding: 10px 14px;
+        font-size: 16px;
+        border: 1.5px solid #555;
+        border-radius: 6px;
+        background-color: #f8f8f8;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .styled-select:hover {
+        background-color: #ececec;
+      }
+
+      .styled-select:focus {
+        border-color: #0077cc;
+        box-shadow: 0 0 4px rgba(0, 119, 204, 0.5);
+      }
+    </style>
+
+    <style>
+      .team-section {
+  text-align: center;
+}
+    </style>
+  <style>
+    .team-section {
+  text-align: center;
+  max-width: 800px;   /* adjust width as needed */
+  margin: 0 auto;     /* keeps it centered */
+}
+  </style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    .staff-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: flex-start;
+    }
+
+    .staff-card {
+      width: 300px;
+      background: #f1f1f1;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .staff-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .staff-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .role-badge {
+      background: black; 
+      color: white;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .staff-name {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .staff-description {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #333;
+    }
+  </style>
+  <style>
+/* --- Lift-up physics for top nav links --- */
+.w3-top .w3-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.w3-top .w3-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: add slight shadow on click for tactile feedback */
+.w3-top .w3-button:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+  </head>
+<body>
+
+
+<!-- TOP BAR -->
+<div class="w3-top">
+  <div class="w3-row w3-large w3-white" style="align-items: center;">
+    <div class="w3-col s2" style="text-align:center;">
+       <a href="index.html">
+      <img src="Legacy/legacy logo.png" style="width:30%;">
+      </a>
+    </div>
+    <div class="w3-col s2">
+      <a href="index.html" class="w3-button w3-block">Home</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="our_team.html" class="w3-button w3-block">Our Teams</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="who_we_are.html" class="w3-button w3-block">Who we are</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="contact.html" class="w3-button w3-block">Contact</a>
+    </div>
+  </div>
+</div>
+
+ 
+  <!-- OUR TEAM INTRO PAGE -->
+<div class="w3-row w3-container">
+  <div class="w3-center w3-padding-64">
+    <span class="w3-xxlarge w3-border-dark-grey w3-padding-16">Our Team</span>
+  </div>
+
+  <!-- CENTERED EXPLANATION TEXT-->
+  <div style="max-width: 900px; margin: 0 auto;">
+    <p style="font-size:18px; text-align:center;">
+      Here at Legacy Robotics, our team is made up of five passionate students
+      from diverse disciplines, collaborating across five sub teams -- Business,
+      Electrical, Mechanical, Science, and Software -- to bring innovation to
+      life and push the boundaries of space exploration.
+    </p>
+  </div>
+</div>
+
+
+<!-- DROPDOWN MENU FOR TEAMS -->
+<div style="margin-left: 50px; margin-top: 30px;">
+  <select id="teamSelect" onchange="showTeamSection()" class="styled-select">
+    <option value="project manager" selected>Project Manager</option>
+    <option value="business">Business</option>
+    <option value="dynamics">Dynamics</option>
+    <option value="chassis">Chassis</option>
+    <option value="suspension">Suspension</option>
+    <option value="drone">Drone</option>
+    <option value="science mechanical">Science Mechanical</option>
+    <option value="life detection">Life Detection</option>
+    <option value="electrical">Electrical</option>
+    <option value="manufacturing">Manufacturing</option>
+    <option value="software">Software</option>
+  </select>
+</div>
+
+
+<!--PROJECT MANAGER CARD -->
+<div id="project manager" class="team-section" style="display:none;">
+  <h3>Project Manager</h3>
+  <p>Leader of Legacy Robotics at the University of California, Irvine</p>
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Diego Martinez.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Project Manager</div>
+        <div class="staff-name">Diego Martinez (He/Him)</div>
+        <div class="staff-description">
+          Mechanical Engineering (5th year)
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+  
+
+<!-- BUSINESS TEAM CARDS-->
+<div id="business" class="team-section" style="display:none;">
+  <h3>Business Team</h3>
+  <p>The Business Team manages sponsorship outreach, fundraising, budgeting, and marketing to support the organization's mission. Our team also actively grows the face of the organization and who it reaches!</p>
+
+ <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Business Team Lead</div>
+        <div class="staff-name">Faith Cie (She/Her)</div>
+        <div class="staff-description">
+          text goes here
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Ani Lim.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Media Team</div>
+        <div class="staff-name">Ani Lim (She/Her)</div>
+        <div class="staff-description">
+          Mechanical Engineering (2nd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Jackson Chang .png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Media Team</div>
+        <div class="staff-name">Jackson Chang (He/Him)</div>
+        <div class="staff-description">
+          Cognitive Science, Applied & Computational Mathematics (2nd year)
+        </div>
+      </div>
+    </div>
+
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Xam de Luna.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Media Team</div>
+        <div class="staff-name">Xam de Luna (She/Her)</div>
+        <div class="staff-description">
+          Biomedical Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Dyeon Maeng.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Business Team</div>
+        <div class="staff-name">Dyeon Maeng (She/Her)</div>
+        <div class="staff-description">
+          Electrical Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Finance Team</div>
+        <div class="staff-name">Dylan Yu (He/Him)</div>
+        <div class="staff-description">
+          Undeclared (1st year)
+        </div>
+      </div>
+    </div>
+
+</div>
+</div>
+
+
+<!--DYNAMICS TEAM CARD-->
+<div id="dynamics" class="team-section" style="display:none;">
+  <h3>Dynamics Team</h3>
+  <p>Dynamics is responsible for designing the arms and the wheels of the rover. Our team makes sure that our rover can travel over uneven terain and be able to like objects that weight more than 5 kg.</p>
+
+ 
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Dynamics Team Lead</div>
+        <div class="staff-name">Broden Golich (He/Him)</div>
+        <div class="staff-description">
+          Mechanical Engineering (2nd Year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Shiraz Ben Itzhak.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Wheel Hub Team</div>
+        <div class="staff-name">Shiraz Ben Itzhak (She/Her)</div>
+        <div class="staff-description">
+          Mechanical Engineering (3rd Year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Miki Ng.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Arm Team</div>
+        <div class="staff-name">Miki Ng (She/Her)</div>
+        <div class="staff-description">
+          Aerospace Engineering (3rd Year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Jake Gannon.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Wheel Team</div>
+        <div class="staff-name">Jake Gannon (He/Him)</div>
+        <div class="staff-description">
+          Mechanical Engineering (1st Year)
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CHASSIS TEAM CARDS-->
+<div id="chassis" class="team-section" style="display:none;">
+  <h3>Chassis Team</h3>
+  <p>Description of team goes here</p>
+  
+ 
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Chassis Team Lead</div>
+        <div class="staff-name">Jack Ishibashi (He/Him)</div>
+        <div class="staff-description">
+         Text goes here
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px">
+      <img src="Legacy/Joshua Lam.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Chassis Team</div>
+        <div class="staff-name">Joshua Lam (He/Him)</div>
+        <div class="staff-description">
+          Aerospace Engineering (2nd Year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Chassis Team</div>
+        <div class="staff-name">Ajay Rajesh (He/Him)</div>
+        <div class="staff-description">
+          Mechanical Engineering (3rd Year)
+        </div>
+      </div>
+    </div>
+
+
+</div>
+</div>
+
+<!-- SUSPENSION TEAM CARDS-->
+<div id="suspension" class="team-section" style="display:none;">
+  <h3>Suspension Team</h3>
+  <p>Team description goes here</p>
+  
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/Addison Rushign.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Suspension Team Lead</div>
+        <div class="staff-name">Addison Rushing (She/Her)</div>
+        <div class="staff-description">
+         Mechanical Engineering (4th year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/Sophia Martinez.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Suspension Team</div>
+        <div class="staff-name">Sophia Martinez (She/Her)</div>
+        <div class="staff-description">
+         Aerospace Engineering (2nd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Suspension Team</div>
+        <div class="staff-name">Michael Geronimo (he/Him)</div>
+        <div class="staff-description">
+         Mechanical Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+</div>
+
+
+<!-- DRONE TEAM CARDS -->
+<div id="drone" class="team-section" style="display:none;">
+  <h3>Drone Team</h3>
+  <p>Team description goes here</p>
+   
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/Tristan Dela Cruz.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Drone Team Lead</div>
+        <div class="staff-name">Tristan Dela Cruz (He/Him)</div>
+        <div class="staff-description">
+         Electrical Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Drone Team </div>
+        <div class="staff-name">Jedd Villamarin (He/Him)</div>
+        <div class="staff-description">
+         Computer Engineering (5th year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Drone Team</div>
+        <div class="staff-name">Anthony Fabros (He/Him)</div>
+        <div class="staff-description">
+         Mechanical Engineering (2nd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/Janice Ho.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Drone Team </div>
+        <div class="staff-name">Janice Ho (She/Her)</div>
+        <div class="staff-description">
+         Computer Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Ani Lim.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Drone Team</div>
+        <div class="staff-name">Ani Lim (She/Her)</div>
+        <div class="staff-description">
+          Mechanical Engineering (2nd year)
+        </div>
+      </div>
+    </div>
+  
+</div>
+</div>
+
+
+<!-- SCIENCE MECHANICAL TEAM CARDS-->
+<div id="science mechanical" class="team-section" style="display:none;">
+  <h3>Science Mechanical Team</h3>
+  <p>Team Description goes here.</p>
+  
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Science Mechanical Lead</div>
+        <div class="staff-name">Jaden Ma (They/Them)</div>
+        <div class="staff-description">
+          Mechanical Engineering (4th Year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/Ahmad Rizwan.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Science Mechanical Team</div>
+        <div class="staff-name">Ahmad Rizwan (He/Him)</div>
+        <div class="staff-description">
+          Mechanical Engineering (4th Year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Xam de Luna.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Science Mechanical Team</div>
+        <div class="staff-name">Xam de Luna (She/Her)</div>
+        <div class="staff-description">
+          Biomedical Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Prince Mundy.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Science Mechanical Team</div>
+        <div class="staff-name">Prince Mundy (He/Him)</div>
+        <div class="staff-description">
+          Biomedical Engineering (5th year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Science Mechanical Team</div>
+        <div class="staff-name">Alexis Bravo (He/Him)</div>
+        <div class="staff-description">
+          Aerospace Engineering (2nd year)
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- LIFE DETECTION TEAM CARDS-->
+<div id="life detection" class="team-section" style="display:none;">
+  <h3>Life Detection Team</h3>
+  <p>The Life Detection team is responsible for determining if there is life detected in the soil samples gathered by the rover.</p>
+
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Life Detection Team Lead</div>
+        <div class="staff-name">Abigail Marciniak (She/Her)</div>
+        <div class="staff-description">
+          text goes here
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Arjan Gillan.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Life Detection Team</div>
+        <div class="staff-name">Arjan Gillan (He/Him)</div>
+        <div class="staff-description">
+          Biomedical Engineering (2nd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Xam de Luna.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Life Detection Team</div>
+        <div class="staff-name">Xam de Luna (She/Her)</div>
+        <div class="staff-description">
+          Biomedical Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Hannah Hu.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Life Detection Team</div>
+        <div class="staff-name">Hannah Hu (She/Her)</div>
+        <div class="staff-description">
+          Biomedical Engineering (1st year)
+        </div>
+      </div>
+    </div>
+
+    
+
+
+</div>
+</div>
+
+<!-- ELECTRICAL TEAM CARDS -->
+<div id="electrical" class="team-section" style="display:none;">
+  <h3>Electrical Team</h3>
+  <p>Team Description goes here.</p>
+  
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Electrical Team Lead</div>
+        <div class="staff-name">Francine De Borja (She/Her)</div>
+        <div class="staff-description">
+          text goes here
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Electrical Team </div>
+        <div class="staff-name">Jedd Villamarin (He/Him)</div>
+        <div class="staff-description">
+         Computer Engineering (5th year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/Evan Te.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Electrical Team </div>
+        <div class="staff-name">Evan Te (He/Him)</div>
+        <div class="staff-description">
+         Computer Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Electrical Team </div>
+        <div class="staff-name">Yael Bernal Perez (He/Him)</div>
+        <div class="staff-description">
+         Electrical Engineering (2nd year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style = "width:250px">
+      <img src="Legacy/Janice Ho.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Electrical Team </div>
+        <div class="staff-name">Janice Ho (She/Her)</div>
+        <div class="staff-description">
+         Computer Engineering (3rd year)
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
+</div>
+
+
+<!--MANUFACTURE TEAM CARDS-->
+<div id="manufacturing" class="team-section" style="display:none;">
+  <h3>Manufacturing Team</h3>
+  <p>Team Description goes here.</p>
+  
+  
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Adel Khalil.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Manufacture Team Lead</div>
+        <div class="staff-name">Adel Khalil (He/Him)</div>
+        <div class="staff-description">
+          Mechanical Engineering (3rd Year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/Kenny Nim.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Manufacture Team</div>
+        <div class="staff-name">Kenny Nim (He/Him)</div>
+        <div class="staff-description">
+          Mechanical Engineering (3rd Year)
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Manufacture Team</div>
+        <div class="staff-name">Marie Alayon (She/Her)</div>
+        <div class="staff-description">
+          Aerospace Engineering (1st Year)
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
+</div>
+
+
+<!--SOFTWARE TEAM CARDS -->
+<div id="software" class="team-section" style="display:none;">
+  <h3>Software Team</h3>
+  <p>The software team develops the rover's autonomous navigation and interface systems with real-time processing and robust coding to ensure intelligent responses.</p>
+
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <div class="staff-card" style="width:250px;">
+      <img src="Legacy/legacy logo.png" alt="Person Photo">
+      <div class="staff-info">
+        <div class="role-badge">Software Team Lead</div>
+        <div class="staff-name">Brandon Lichter (He/Him)</div>
+        <div class="staff-description">
+          text goes here
+        </div>
+      </div>
+    </div>
+
+
+</div>
+</div>
+
+
+
+<!-- FUNCTION STUFF -->
+<script>
+function showTeamSection() {
+  const selectedTeam = document.getElementById("teamSelect").value;
+  const sections = document.getElementsByClassName("team-section");
+
+  for (let section of sections) {
+    section.style.display = "none";
+  }
+
+  if (selectedTeam) {
+    document.getElementById(selectedTeam).style.display = "block";
+  }
+}
+
+window.onload = showTeamSection;
+</script>
+
+
+
