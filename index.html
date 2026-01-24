@@ -119,9 +119,9 @@
       <span class="w3-xxlarge w3-bottombar w3-border-dark-grey w3-padding-16">Our Goals</span>
     </div>
     <ol style="font-size:18px; text-align:justify; margin-right:50px;">
-      <li>Fabricate a fully-functional rover by Spring 2025.</li>
+      <li>Fabricate a fully-functional rover by Spring 2026</li>
       <li>Iterate and improve on design in time for our Winter Design Review 2026 </li>
-      <li>Submit our rover for the Systems Acceptance Review (SAR) and compete in the University Rover Challenge 2026!</li>
+      <li>Submit our rover for the Systems Acceptance Review (SAR) and compete in the Canadian Rover challenge and the University Rover Challenge (UCR) 2026!</li>
     </ol>
   </div>
 </div>
@@ -134,8 +134,9 @@
 
   <!-- Text (left side) -->
   <div class="w3-half" style="padding-right:40px;">
+   
     <div class="w3-center w3-padding-32">
-      <h2 class="w3-xxlarge" style="font-weight:bold;">We Need Your Help!</h2>
+      <span class="w3-xxlarge w3-bottombar w3-border-dark-grey w3-padding-16">We need your help</span>
     </div>
 
     <p style="color:#555; font-size:17px; text-align:justify; line-height:1.7;">
@@ -163,6 +164,118 @@
   </div>
 
 </div>
+
+
+
+
+
+
+<!-- SLIDESHOW-->
+<div style="display:flex; justify-content:center; align-items:center; margin-top:40px;">
+  <div style="max-width:900px; width:90%; position:relative;">
+  
+  <div class="mySlides">
+      <img src="Legacy/legacy_design.png" style="width:100%; height:500px; object-fit:cover; border-radius:10px;">
+    </div>
+
+    <div class="mySlides">
+      <img src="Legacy/Habit_fund.png" style="width:100%; height:1100px; object-fit:cover; border-radius:10px;">
+    </div>
+
+     <div class="mySlides">
+      <img src="Legacy/7leaves_fund.png" style="width:100%; height:1100px; object-fit:cover; border-radius:10px;">
+    </div>
+
+     <div class="mySlides">
+      <img src="Legacy/legacy_fundraiser.png" style="width:100%; height:1100px; object-fit:cover; border-radius:10px;">
+    </div>
+
+  </div>
+</div>
+
+
+    <!-- Controls -->
+<div class="w3-container w3-dark-grey w3-padding w3-xlarge" 
+     style="
+       display:flex; 
+       justify-content:space-between; 
+       align-items:center; 
+       max-width:900px; 
+       margin:30px auto; 
+       border-radius:15px; 
+       padding:15px 25px; 
+       background:linear-gradient(135deg, #2f2f2f, #1c1c1c); 
+       box-shadow:0 4px 12px rgba(0,0,0,0.25);
+     ">
+
+  <!-- Left Arrow -->
+  <div onclick="plusDivs(-1)" 
+       style="
+         cursor:pointer; 
+         width:65px; 
+         height:65px; 
+         display:flex; 
+         justify-content:center; 
+         align-items:center; 
+         border-radius:50%; 
+         background:radial-gradient(circle, #444 0%, #222 80%); 
+         transition:all 0.25s ease;
+         box-shadow:0 4px 10px rgba(0,0,0,0.3);
+       "
+       onmouseover="this.style.background='radial-gradient(circle, #008080, #004d4d)'; this.style.transform='scale(1.1)'"
+       onmouseout="this.style.background='radial-gradient(circle, #444 0%, #222 80%)'; this.style.transform='scale(1)'">
+    <i class="fa fa-arrow-left" style="font-size:32px; color:white;"></i>
+  </div>
+
+  <!-- Dots -->
+  <div class="w3-center" style="display:flex; gap:10px;">
+    <span class="w3-tag demodots" 
+          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
+          onclick="currentDiv(1)"
+          onmouseover="this.style.background='#00b3b3'"
+          onmouseout="this.style.background='transparent'"></span>
+    <span class="w3-tag demodots" 
+          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
+          onclick="currentDiv(2)"
+          onmouseover="this.style.background='#00b3b3'"
+          onmouseout="this.style.background='transparent'"></span>
+    <span class="w3-tag demodots" 
+          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
+          onclick="currentDiv(3)"
+          onmouseover="this.style.background='#00b3b3'"
+          onmouseout="this.style.background='transparent'"></span>
+    <span class="w3-tag demodots" 
+          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
+          onclick="currentDiv(3)"
+          onmouseover="this.style.background='#00b3b3'"
+          onmouseout="this.style.background='transparent'"></span>
+ 
+ 
+  </div>
+
+  <!-- Right Arrow -->
+  <div onclick="plusDivs(1)" 
+       style="
+         cursor:pointer; 
+         width:65px; 
+         height:65px; 
+         display:flex; 
+         justify-content:center; 
+         align-items:center; 
+         border-radius:50%; 
+         background:radial-gradient(circle, #444 0%, #222 80%); 
+         transition:all 0.25s ease;
+         box-shadow:0 4px 10px rgba(0,0,0,0.3);
+       "
+       onmouseover="this.style.background='radial-gradient(circle, #008080, #004d4d)'; this.style.transform='scale(1.1)'"
+       onmouseout="this.style.background='radial-gradient(circle, #444 0%, #222 80%)'; this.style.transform='scale(1)'">
+    <i class="fa fa-arrow-right" style="font-size:32px; color:white;"></i>
+  </div>
+</div>
+
+</div>
+
+
 
      
 <!-- SPONSOR SECTION -->
@@ -237,4 +350,33 @@ function showDivs(n) {
 
 
 
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
 
