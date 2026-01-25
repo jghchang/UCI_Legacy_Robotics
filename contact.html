@@ -62,9 +62,25 @@
     <div class="w3-col s2">
       <a href="index.html" class="w3-button w3-block">Home</a>
     </div>
-    <div class="w3-col s2">
-      <a href="our_team.html" class="w3-button w3-block">Our Team</a>
+    
+  <div class="w3-col s2 dropdown">
+    <a href="our_team.html" class="w3-button w3-block">Our Teams</a>
+
+    <div class="dropdown-content">
+      <a href="project_manager.html">Project Manager</a>
+      <a href="business.html">Business</a>
+      <a href="dynamics.html">Dynamics</a>
+      <a href="chassis.html">Chassis</a>
+      <a href="suspension.html">Suspension</a>
+      <a href="drone.html">Drone</a>
+      <a href="science_mechanical.html">Science-Mechanical</a>
+      <a href="life_detection.html">Life Detection</a>
+      <a href="electrical.html">Electrical</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="software.html">Software</a>
     </div>
+  </div>
+    
     <div class="w3-col s3">
       <a href="who_we_are.html" class="w3-button w3-block">Who we are</a>
     </div>
@@ -136,5 +152,44 @@
 
 
 
+<style>
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Hidden dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 999;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+/* Hover effect on links */
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
 
 
