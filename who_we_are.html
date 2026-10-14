@@ -87,7 +87,7 @@
 </div>
 
 
-<h2 style = "font-size:26px; text-align:center;">Winter Design Review 2026</h2>
+<h2 style = "font-size:36px; text-align:center;">ZOTFUNDER</h2>
  <!-- DONATION SECTION -->
 <div class="w3-row w3-padding-64" style="align-items:center; display:flex; flex-wrap:wrap;">
 
@@ -125,118 +125,8 @@
 </div>
 
 
-    <!-- Controls -->
-<div class="w3-container w3-dark-grey w3-padding w3-xlarge" 
-     style="
-       display:flex; 
-       justify-content:space-between; 
-       align-items:center; 
-       max-width:900px; 
-       margin:30px auto; 
-       border-radius:15px; 
-       padding:15px 25px; 
-       background:linear-gradient(135deg, #2f2f2f, #1c1c1c); 
-       box-shadow:0 4px 12px rgba(0,0,0,0.25);
-     ">
-
-  <!-- Left Arrow -->
-  <div onclick="plusDivs(-1)" 
-       style="
-         cursor:pointer; 
-         width:65px; 
-         height:65px; 
-         display:flex; 
-         justify-content:center; 
-         align-items:center; 
-         border-radius:50%; 
-         background:radial-gradient(circle, #444 0%, #222 80%); 
-         transition:all 0.25s ease;
-         box-shadow:0 4px 10px rgba(0,0,0,0.3);
-       "
-       onmouseover="this.style.background='radial-gradient(circle, #008080, #004d4d)'; this.style.transform='scale(1.1)'"
-       onmouseout="this.style.background='radial-gradient(circle, #444 0%, #222 80%)'; this.style.transform='scale(1)'">
-    <i class="fa fa-arrow-left" style="font-size:32px; color:white;"></i>
-  </div>
-
-  <!-- Dots -->
-  <div class="w3-center" style="display:flex; gap:10px;">
-    <span class="w3-tag demodots" 
-          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
-          onclick="currentDiv(1)"
-          onmouseover="this.style.background='#00b3b3'"
-          onmouseout="this.style.background='transparent'"></span>
-    <span class="w3-tag demodots" 
-          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
-          onclick="currentDiv(2)"
-          onmouseover="this.style.background='#00b3b3'"
-          onmouseout="this.style.background='transparent'"></span>
-    <span class="w3-tag demodots" 
-          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
-          onclick="currentDiv(3)"
-          onmouseover="this.style.background='#00b3b3'"
-          onmouseout="this.style.background='transparent'"></span>
-    <span class="w3-tag demodots" 
-          style="width:15px; height:15px; border-radius:50%; border:2px solid #aaa; background:transparent; cursor:pointer; transition:0.3s;"
-          onclick="currentDiv(3)"
-          onmouseover="this.style.background='#00b3b3'"
-          onmouseout="this.style.background='transparent'"></span>
  
- 
-  </div>
 
-  <!-- Right Arrow -->
-  <div onclick="plusDivs(1)" 
-       style="
-         cursor:pointer; 
-         width:65px; 
-         height:65px; 
-         display:flex; 
-         justify-content:center; 
-         align-items:center; 
-         border-radius:50%; 
-         background:radial-gradient(circle, #444 0%, #222 80%); 
-         transition:all 0.25s ease;
-         box-shadow:0 4px 10px rgba(0,0,0,0.3);
-       "
-       onmouseover="this.style.background='radial-gradient(circle, #008080, #004d4d)'; this.style.transform='scale(1.1)'"
-       onmouseout="this.style.background='radial-gradient(circle, #444 0%, #222 80%)'; this.style.transform='scale(1)'">
-    <i class="fa fa-arrow-right" style="font-size:32px; color:white;"></i>
-  </div>
-</div>
-
-</div>
-
-
-
-<script>
-// Slideshow
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demodots");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-</script>
 
 
 
